@@ -7,7 +7,7 @@ import java.io.File;
 import javax.swing.*;
 
 
-class Demo implements ActionListener
+class MusicPlayer implements ActionListener
 {
     JFrame f1 = new JFrame("Music Player");  
     
@@ -142,6 +142,6 @@ class Demo implements ActionListener
     
     public static void main(String args[])
     {
-     new Demo().proceed();   
+     new MusicPlayer().proceed();   
     }
 }
