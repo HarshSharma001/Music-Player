@@ -30,7 +30,7 @@ class Demo implements MouseListener {
 
     private int music_is_Playing;
 
-    ImageIcon ic = new ImageIcon("E:\\Java Projects\\Music Player2\\src\\Image Icons\\BG.jpg");
+    ImageIcon ic = new ImageIcon("E:\\Java Projects\\Music Player2\\src\\Image Icons\\Demo.gif");
 
     ImageIcon ic1 = new ImageIcon("E:\\Java Projects\\Music Player2\\src\\Image Icons\\512.png");
 
@@ -63,9 +63,16 @@ class Demo implements MouseListener {
         play.setBounds(353, 90, 152, 50);
         play.setIcon(ic3);
         play.addMouseListener(new MouseAdapter() {
-
+        	
             public void mousePressed(MouseEvent me) {
+            	try
+            	{
                 eventForPlayLabel();
+            	}catch(Exception e)
+            	{
+            	JOptionPane.showMessageDialog(f1, e);	
+            	tf1.setVisible(false);
+            	}
             }
         });
 
@@ -75,7 +82,14 @@ class Demo implements MouseListener {
         pause.addMouseListener(new MouseAdapter() {
 
             public void mousePressed(MouseEvent me) {
+            	try
+            	{
                 eventForPauseLabel();
+            	}catch(Exception e)
+            	{
+            	JOptionPane.showMessageDialog(f1, e);
+            	tf1.setVisible(false);
+            	}
             }
         });
 
@@ -85,7 +99,13 @@ class Demo implements MouseListener {
         stop.addMouseListener(new MouseAdapter() {
 
             public void mousePressed(MouseEvent me) {
+            	try
+            	{
                 eventForStopLabel();
+            	}catch(Exception e)
+            	{
+            	JOptionPane.showMessageDialog(f1, e);	
+            	}
             }
         });
 
